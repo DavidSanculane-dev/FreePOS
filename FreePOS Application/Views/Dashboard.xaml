@@ -5,7 +5,13 @@
     x:Class="FreePOS.Views.Dashboard"
         Title="FreePOS" Height="Auto" Width="Auto" WindowState="Maximized">
     <Grid>
-        <Menu Background="#FF575757" Foreground="#DDC7C7C7" VerticalAlignment="Top"   Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Background="#FF575757" Foreground="#DDC7C7C7" VerticalAlignment="Top" Grid.ColumnSpan="4">
             <MenuItem  Header="Customer">
                 <MenuItem Header="Add Customer" Click="mi_AddNewCustomer"/>
                 <MenuItem Header="View Customers" Click="mi_ViewAllCustomers"/>
@@ -48,7 +54,7 @@
             </MenuItem>
             <MenuItem Header="Log Out" Click="mi_LogOut"/>
         </Menu>
-        <Grid Background="#f0f0f0" Margin="0,48,0,25">
+        <Grid Background="#f0f0f0" Margin="0,48,0,25" Grid.ColumnSpan="4">
             <WebBrowser Name="webview" VerticalAlignment="Top" Height="210"
                              OverridesDefaultStyle="False"
                             ScrollViewer.CanContentScroll="False"
@@ -78,10 +84,10 @@
 
             <Image Source="/FreePOS;component/assets/pattern1.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="250" Height="Auto"  Opacity="0.7"></Image>
             <Label Content="FreePOS"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="80" Foreground="#DDC7C7C7" >
-               
+
             </Label>
         </Grid>
-        <Label Content=" Software Licenced By Ravicosoft. +92 302 4759550" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontSize="12" Background="#FF4D4D4D" Height="25" Foreground="#DDC7C7C7" Grid.ColumnSpan="2"/>
+        <Label Content=" Software Licenced By David Sanculane +258 843215766" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="0,258,0,0" FontSize="12" Background="#FF4D4D4D" Height="25" Foreground="#DDC7C7C7" Grid.ColumnSpan="4"/>
     </Grid>
 
 </Window>
